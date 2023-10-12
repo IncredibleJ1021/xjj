@@ -4,13 +4,11 @@
 typedef enum { FALSE, TRUE } Bool;
 typedef enum { ERROR, OK } Status;
 typedef double StackElem;
-
 typedef struct {
     StackElem* pBase;
     StackElem* pTop;
     int size;
 } Stack;
-
 Status init_stack(Stack* pStack);
 void stack_free(Stack* pStack);
 Bool is_empty(Stack* pStack);

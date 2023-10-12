@@ -1,7 +1,7 @@
 #include "stack.h"
 #include <string.h>
 #include <ctype.h>
-#include <stdio.h> // 添加此行
+#include <stdio.h>
 #include<stdlib.h>
 #define STACKSIZE 100
 int getPriority(StackElem operater) {

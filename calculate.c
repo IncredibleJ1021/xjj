@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <readline/readline.h>
 #include <readline/history.h>
-#include "stack.h" // 包含辅助函数和函数声明
+#include "stack.h" 
 
 #define MAXSTRING 100
 #define STACKSIZE 100
@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     char* outputFileName = NULL;
     FILE* outputFile = NULL;
 
-    // Process command line arguments
+    // 命令行
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "-t") == 0) {
             if (i + 1 < argc) {
