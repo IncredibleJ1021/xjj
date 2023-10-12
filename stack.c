@@ -17,7 +17,6 @@ int getPriority(StackElem operater) {
     }
     return ret;
 }
-
 void postfixNotation(char* output, char* expression) {
     char nowChar;
     StackElem temp;
@@ -43,6 +42,7 @@ void postfixNotation(char* output, char* expression) {
                 output[outputNumber++] = temp;
                 output[outputNumber++] = ' ';
             }
+		stack_pop(&operation,&temp);
         } else if (nowChar == '+' || nowChar == '-' || nowChar == '*' || nowChar == '/') {
             while (stack_get_top(&operation, &temp) == OK && getPriority(nowChar) <= getPriority(temp)) {
                 stack_pop(&operation, &temp);
